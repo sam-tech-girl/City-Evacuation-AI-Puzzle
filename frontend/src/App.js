@@ -31,7 +31,7 @@ import React, {
 import "./App.css";
 
 // ─── Constants ───────────────────────────────────────────────
-const API  = "http://localhost:5000";
+const API  = "https://city-evacuation-ai-puzzle.onrender.com";
 const GOAL = [1, 2, 3, 4, 5, 6, 7, 8, 0];
 const TILE_SIZE = 112;   // px — must match CSS .board-inner size / 3
 
