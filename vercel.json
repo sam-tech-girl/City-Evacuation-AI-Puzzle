@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "comment": "City Evacuation AI — Vercel deployment config for React frontend",
+  
   "builds": [
     {
       "src": "frontend/package.json",
