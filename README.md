@@ -1,9 +1,9 @@
-# 🚨 City Evacuation AI — v2 (Industry-Level)
-### 8-Puzzle · A\* Algorithm · React 18 + Flask 3 · Docker + Vercel-ready
+# 🚨 City Evacuation 
+### 8-Puzzle · A\* Algorithm · React 18 + Flask 3 · 
 
 ---
 
-## 🆕 What Changed from v1 → v2
+## 🆕 
 
 | Area | v1 (Prototype) | v2 (Industry-Level) |
 |---|---|---|
@@ -167,31 +167,10 @@ h(n) = Σ |row_curr - row_goal| + |col_curr - col_goal|  for each tile
 
 **Effective branching factor** (`nodes^(1/depth)`) is typically 1.3–1.8 for hard 8-puzzle instances, much better than BFS's ~3.0.
 
----
 
-## 📊 Resume Talking Points
-
-When a recruiter or interviewer asks about this project, lead with:
-
-> *"I built a full-stack intelligent pathfinding system. The backend implements A\* search with a pre-computed O(1) goal map and a closed set for visited-state deduplication, which keeps the solver under 50ms even for 25-move puzzles. The API returns engineering observability metrics — nodes explored, effective branching factor, and solver latency — which the React frontend surfaces in a Tech Stats panel. The frontend uses CSS transform-based tile sliding so moves animate physically rather than teleporting. The whole stack runs in Docker and is deployed on Render + Vercel."*
 
 ---
 
-## ✅ Checklist — What Makes This Industry-Level
 
-- [x] Inversion parity validation (mathematical correctness guarantee)
-- [x] O(1) closed-set membership in A\* hot loop
-- [x] O(1) heuristic goal lookup (pre-computed dict)
-- [x] Engineered observability (nodes_explored, branching_factor, ms timing)
-- [x] CSS `transform: translate()` tile sliding (not DOM re-render)
-- [x] Tech Stats modal surfacing algorithm internals in the UI
-- [x] Single `mode` state machine (not 4 Boolean flags)
-- [x] Full input validation on all endpoints with correct HTTP status codes
-- [x] Dockerfile with non-root user + gunicorn WSGI (production-ready)
-- [x] vercel.json for zero-config frontend deploy
-- [x] `?moves=N` difficulty system (walk-from-goal scrambler)
-- [x] `proxy` in package.json (no CORS issues in dev)
-
----
 
 *City Evacuation AI v2 · React 18 · Flask 3 · A\* · Docker · Vercel*
