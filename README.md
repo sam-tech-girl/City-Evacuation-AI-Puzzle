@@ -1,24 +1,6 @@
 # 🚨 City Evacuation 
 ### 8-Puzzle · A\* Algorithm · React 18 + Flask 3 · 
 
----
-
-## 🆕 
-
-| Area | v1 (Prototype) | v2 (Industry-Level) |
-|---|---|---|
-| **Solvability** | Checked once on shuffle | Inversion-parity validated before every A\* call |
-| **A\* closed list** | `set()` used inconsistently | `set()` of tuples, O(1) lookups, every iteration |
-| **Heuristic lookup** | `list.index()` = O(n) per tile | Pre-built `GOAL_INDEX_MAP` dict = O(1) per tile |
-| **Tile animation** | Board snapped (teleport) | `transform: translate()` per-tile CSS slide |
-| **AI metrics** | Steps + time only | `nodes_explored`, `time_taken_ms`, `branching_factor`, `h(start)`, `solution_depth` |
-| **Tech Stats UI** | None | Full modal with 6 observability metrics |
-| **Difficulty** | None | Easy / Medium / Hard (walk-from-goal scrambler) |
-| **State machine** | 4 boolean flags | Single `mode` string: `idle\|human\|ai\|solved` |
-| **Deployment** | None | `Dockerfile` (gunicorn) + `vercel.json` |
-| **Input validation** | Partial | Full: type, length, content, adjacency checks |
-
----
 
 ## 📁 Project Structure
 
@@ -81,20 +63,6 @@ npm start
 
 ---
 
-## 🐳 Run with Docker (Production)
-
-```bash
-cd evacuation-v2/backend
-
-# Build image
-docker build -t evacuation-ai-backend .
-
-# Run container (maps container port 8000 → host port 5000)
-docker run -p 5000:8000 evacuation-ai-backend
-
-# Backend now available at http://localhost:5000
-```
-
 ---
 
 ## 🚀 Deploy to Production
@@ -148,7 +116,7 @@ docker run -p 5000:8000 evacuation-ai-backend
 
 ---
 
-## 🧠 Algorithm Deep-Dive (for interviews)
+
 
 ### A\* with Manhattan Distance
 
